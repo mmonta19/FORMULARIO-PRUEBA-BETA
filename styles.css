@@ -1,0 +1,138 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #f4f6f8;
+  color: #102027;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 12px;
+  display: grid;
+  gap: 12px;
+}
+
+.breadcrumb {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+  border-left: 4px solid var(--system-color, #455A64);
+  padding-left: 8px;
+}
+
+.breadcrumb button {
+  border: 0;
+  background: transparent;
+  color: #37474f;
+  font-weight: 600;
+  padding: 0;
+}
+
+.system-header {
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: color-mix(in srgb, var(--system-color, #455A64) 16%, white);
+  border: 1px solid color-mix(in srgb, var(--system-color, #455A64) 35%, white);
+}
+
+.system-header h1 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.list { display: grid; gap: 10px; }
+
+.card {
+  border: 1px solid color-mix(in srgb, var(--system-color, #455A64) 35%, #cfd8dc);
+  border-left: 6px solid var(--system-color, #455A64);
+  border-radius: 10px;
+  padding: 12px;
+  background: #fff;
+  color: inherit;
+  text-align: left;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.product p { margin: 4px 0 0; }
+
+label {
+  display: grid;
+  gap: 4px;
+  font-size: 0.85rem;
+  color: #37474f;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #b0bec5;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.product input { width: 90px; }
+
+.cart {
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.cart h2 { margin-top: 0; }
+
+.cart-group {
+  border-left: 6px solid var(--system-color, #455A64);
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.cart-group h3 { margin: 0 0 6px; }
+
+.cart-group ul { margin: 0; padding-left: 16px; }
+
+.cart-group li {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.actions {
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.actions button {
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 12px;
+  background: #1b5e20;
+  color: #fff;
+  font-weight: 700;
+}
+
+.empty { color: #546e7a; }
+
+@media (min-width: 768px) {
+  .products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
